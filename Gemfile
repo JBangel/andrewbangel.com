@@ -22,6 +22,10 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'foundation-rails'
 
+group :production do
+  gem 'puma'
+end
+
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
