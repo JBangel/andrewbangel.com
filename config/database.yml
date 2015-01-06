@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: andrewbangel_production
-  username: postgres
-  password: <%= ENV['ANDREWBANGEL_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
