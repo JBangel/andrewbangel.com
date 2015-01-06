@@ -1,0 +1,31 @@
+<h1>Listing demoreels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Video</th>
+      <th>Resume</th>
+      <th>Breakdown</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @demoreels.each do |demoreel| %>
+      <tr>
+        <td><%= demoreel.video %></td>
+        <td><%= demoreel.resume %></td>
+        <td><%= demoreel.breakdown %></td>
+        <td><%= demoreel.active %></td>
+        <td><%= link_to 'Show', demoreel %></td>
+        <td><%= link_to 'Edit', edit_demoreel_path(demoreel) %></td>
+        <td><%= link_to 'Destroy', demoreel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Demoreel', new_demoreel_path %>

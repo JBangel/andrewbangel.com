@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @demoreel.video %>
+</p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= @demoreel.resume %>
+</p>
+
+<p>
+  <strong>Breakdown:</strong>
+  <%= @demoreel.breakdown %>
+</p>
+
+<iframe src="//player.vimeo.com/video/101258877?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
+<%= link_to 'Back', demoreels_path %>

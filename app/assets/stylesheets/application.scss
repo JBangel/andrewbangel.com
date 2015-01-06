@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+@import "foundation_and_overrides";
+/* Add imports of custom sass/scss files here */
+
+body {
+  background-color: #808080;
+}
+
+header {
+  background-color: #616161;
+    float:left;
+    padding:15px 0;
+    width:100%;
+    max-width: none;
+
+    ul.inline-list {
+        margin-bottom: 0px;
+    }
+
+  h1 {
+        color: white;
+        font-size: 2em;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+
+        #fname {
+          font-weight: bold;
+        }
+
+        #lname {
+          font-weight: normal;
+        }
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 0px;
+    padding-top: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+        letter-spacing: 2.5px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+#header {
+  background-color: #616161;
+    float:left;
+    padding:15px 0;
+    width:100%;
+    max-width: none;
+
+    ul.inline-list {
+        margin-bottom: 0px;
+    }
+
+  h1 {
+        color: white;
+        font-size: 2em;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+
+        #fname {
+          font-weight: bold;
+        }
+
+        #lname {
+          font-weight: normal;
+        }
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 0px;
+    padding-top: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+        letter-spacing: 2.5px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+#art {
+  height: 100px;
+  float: right;
+}
+
+#drvideo {
+  -webkit-box-shadow: -3px 3px 6px #000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+          box-shadow: -3px 3px 6px #000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+
+#footer {
+  float:left;
+  padding:15px 0;
+  width:100%;
+  max-width: none;
+}
+

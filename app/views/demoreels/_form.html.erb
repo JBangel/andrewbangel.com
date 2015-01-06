@@ -1,0 +1,33 @@
+<%= form_for(@demoreel) do |f| %>
+  <% if @demoreel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@demoreel.errors.count, "error") %> prohibited this demoreel from being saved:</h2>
+
+      <ul>
+      <% @demoreel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </div>
+  <div class="field">
+    <%= f.label :resume %><br>
+    <%= f.text_field :resume %>
+  </div>
+  <div class="field">
+    <%= f.label :breakdown %><br>
+    <%= f.text_field :breakdown %>
+  </div>
+  <div class="field">
+    <%= f.label :active %><br>
+    <%= f.check_box :active %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

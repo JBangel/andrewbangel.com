@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bio.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @bio.body %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @bio.active %>
+</p>
+
+<%= link_to 'Edit', edit_bio_path(@bio) %> |
+<%= link_to 'Back', bios_path %>
