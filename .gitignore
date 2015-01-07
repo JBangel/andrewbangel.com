@@ -4,11 +4,13 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore the secret directory
+# Ignore the secret directories
 /.secret
+/deploy
 
 # Ignore bundler config.
 /.bundle
+/bin
 /public/assets
 
 # Ignore the default SQLite database.
