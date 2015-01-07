@@ -10,7 +10,6 @@
 
 # Ignore bundler config.
 /.bundle
-/bin
 /public/assets
 
 # Ignore the default SQLite database.
