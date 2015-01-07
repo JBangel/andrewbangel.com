@@ -6,10 +6,10 @@ workers 2
 # It would be a good idea to abstract away the `/full/path/to/your/project` path to
 # an ENV variable so that you don't have to mess around with your
 # production deploy path directly in your config file.
-pidfile ENV['APP_DIR'] << "/tmp/puma.pid"
+pidfile ENV['APP_PATH'] << "/tmp/puma.pid"
 
 if ENV['RAILS_ENV'] == 'production'
-  bind "unix:///full/path/to/your/project/tmp/puma.sock"
+  bind "unix:///" << ENV['APP_PATH'] << "/tmp/puma.sock"
 else
   port '3000'
 end
