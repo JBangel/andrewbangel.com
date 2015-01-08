@@ -1,0 +1,48 @@
+section#header {
+    @include outer-container;
+    @include background(image-url('stick.png') no-repeat, linear-gradient(to right, #3d3d3d 0%, #434343 50%, #3d3d3d 100%));
+    background-size: auto 85%, auto;
+    background-position: center right;
+
+    margin:    30px 0 50px 0;
+    padding:   30px 15px 0px 30px;
+    height:    175px;
+    width:     100%;
+    max-width: none;
+    position: relative;
+
+    h1 {
+        color: white;
+        font-size: 3em;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+
+        span.heavy {
+            font-weight: bold;
+        }
+    }
+
+    h2 {
+        color: white;
+        font-size: 2em;
+        margin-top: 0px;
+        padding-top: 0px;
+        font-family: 'Gauge';
+        font-style: normal;
+        text-align: justify;
+        letter-spacing: 2.5px;
+    }
+
+    .navbar {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+
+        ul {
+            text-align: center;
+        }
+    }
+}

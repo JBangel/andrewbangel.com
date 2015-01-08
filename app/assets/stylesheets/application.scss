@@ -10,123 +10,34 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
- *= require foundation_and_overrides
-
  */
 
-@import "foundation_and_overrides";
-/* Add imports of custom sass/scss files here */
+$visual-grid: false;
+
+$large-screen: em(860) !default;
+$horizontal-bar-mode: $large-screen;
+$centered-navigation-height: 60px;
+$centered-navigation-item-padding: 1em;
+$centered-navigation-submenu-padding: 1em;
+
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/base";
+@import "normalize.css";
+
+@import "helpers";
+@import "header";
+@import "demoreels";
+@import "works";
 
 body {
-  background-color: #808080;
+    width:  100%;
+    height: 100%;
+    @include background(linear-gradient(to right, #505050 0%, #747474 50%, #505050 100%));
+    background-color: #808080;
 }
 
-header {
-  background-color: #616161;
-    float:left;
-    padding:15px 0;
-    width:100%;
-    max-width: none;
-
-    ul.inline-list {
-        margin-bottom: 0px;
-    }
-
-  h1 {
-        color: white;
-        font-size: 2em;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        font-family: 'Gauge';
-        font-style: normal;
-        text-align: justify;
-
-        #fname {
-          font-weight: bold;
-        }
-
-        #lname {
-          font-weight: normal;
-        }
-  }
-
-  h2 {
-    color: white;
-    font-size: 1.2em;
-    margin-top: 0px;
-    padding-top: 0px;
-        font-family: 'Gauge';
-        font-style: normal;
-        text-align: justify;
-        letter-spacing: 2.5px;
-  }
-
-  a {
-    color: white;
-  }
+.content {
+    @include outer-container;
 }
-
-#header {
-  background-color: #616161;
-    float:left;
-    padding:15px 0;
-    width:100%;
-    max-width: none;
-
-    ul.inline-list {
-        margin-bottom: 0px;
-    }
-
-  h1 {
-        color: white;
-        font-size: 2em;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        font-family: 'Gauge';
-        font-style: normal;
-        text-align: justify;
-
-        #fname {
-          font-weight: bold;
-        }
-
-        #lname {
-          font-weight: normal;
-        }
-  }
-
-  h2 {
-    color: white;
-    font-size: 1.2em;
-    margin-top: 0px;
-    padding-top: 0px;
-        font-family: 'Gauge';
-        font-style: normal;
-        text-align: justify;
-        letter-spacing: 2.5px;
-  }
-
-  a {
-    color: white;
-  }
-}
-
-#art {
-  height: 100px;
-  float: right;
-}
-
-#drvideo {
-  -webkit-box-shadow: -3px 3px 6px #000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-          box-shadow: -3px 3px 6px #000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
-}
-
-#footer {
-  float:left;
-  padding:15px 0;
-  width:100%;
-  max-width: none;
-}
-

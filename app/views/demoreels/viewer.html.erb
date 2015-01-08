@@ -1,22 +1,18 @@
-<div class="row">&nbsp;</div>
-<div id="reel" class="row">
-  <div class="small-12 columns text-right">
-    <ul class="inline-list">
-    <%= render inline: @demoreel.breakdown_url %>
-    <%= render inline: @demoreel.resume_url %>
-    </ul>
-    <div id="drvideo" class="flex-video widescreen vimeo">
+<div class="navbar">
+  <ul>
+    <li><%= link_to 'BREAKDOWN', @demoreel.breakdown_url %></li>
+    <li><%= link_to 'RESUME', @demoreel.resume_url %></li>
+  </ul>
+</div>
+<div id="demoreel-video">
+  <div class="video-wrapper">
     <%= render inline: @demoreel.video_url %>
-    </div>
   </div>
 </div>
-<div id="footer" class="row">&nbsp;</div>
 
 <%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
 <%= link_to 'Back', demoreels_path %>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-
-
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/foundation/js/foundation.min.js"></script>
+<script src="js/app.js"></script>

@@ -13,6 +13,7 @@ class DemoreelsController < ApplicationController
   end
 
   def viewer
+    @pageclass = "demoreel"
     @demoreel = Demoreel.find_by active: true
   end
 

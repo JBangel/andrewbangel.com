@@ -1,0 +1,47 @@
+// Place all the styles related to the works controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        display: inline;
+    }
+
+    a {
+        color: white;
+    }
+
+    li.selected {
+        border-bottom: 1px solid white;
+
+        a {
+            color: orange;
+        }
+    }
+
+    li {
+        margin-left: 0;
+        padding: 0px 15px;
+        list-style: none;
+        display: inline;
+    }
+}
+
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  embed, object, iframe {
+    @include position(absolute, 0px null null 0px);
+    @include size(100%);
+  }
+}
+
+

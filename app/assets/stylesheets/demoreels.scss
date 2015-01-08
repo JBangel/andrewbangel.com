@@ -1,0 +1,33 @@
+// Place all the styles related to the demoreels controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+section#demoreel {
+  a {
+    color: white;
+  }
+
+  .navbar {
+    margin-top: 75px;
+    text-align: right;
+
+    li:first-child {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    li:last-child {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+
+  #demoreel-video {
+    -webkit-box-shadow: -3px 3px 6px #000; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+            box-shadow: -3px 3px 6px #000; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+
+    margin-bottom: 75px;
+  }
+}
+
+

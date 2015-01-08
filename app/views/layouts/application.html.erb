@@ -9,35 +9,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <section id="header">
+      <h1><span class="heavy">ANDREW</span> BANGEL</h1>
+      <h2>CHARACTER ANIMATOR</h2>
+      <div class="navbar">
+        <ul>
+          <li class="selected"><%= link_to "REEL", root_path %></li>
+          <li><%= link_to "WORKS", works_path %></li>
+          <li><a href="#">&nbsp;ABOUT&nbsp;</a></li>
+          <li><a href="#">&nbsp;CONTACT&nbsp;</a></li>
+        </ul>
+      </div>
+    </section>
+
     <p id="notice"><%= notice %></p>
-    <div id="header" class="row">
-      <div class="small-9 columns">
-        <div class="row">
-          <div class="small-12 columns">
-            <h1><span id="fname">ANDREW</span><span id="lname">BANGEL</span></h1>
-            <h2>CHARACTER ANIMATOR</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="small-offset-4 small-8 columns text-center">
-            <ul class="inline-list">
-              <%= link_to "REEL", root_path %>
-              <%= link_to "WORKS", works_path %>
-              <a href="#">&nbsp;ABOUT&nbsp;</a>
-              <a href="#">&nbsp;CONTACT&nbsp;</a>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="small-3 columns">
-        <%= image_tag "stick.png", id: "art" %>
-      </div>
-    </div>
-    <div class="row <%= @pageclass %>">
-      <div class="large-12 columns">
-        <%= yield %>
-      </div>
-    </div>
+
+    <section id="<%= @pageclass %>" class="content">
+      <%= yield %>
+    </section>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
