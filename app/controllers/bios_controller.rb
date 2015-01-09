@@ -4,12 +4,14 @@ class BiosController < ApplicationController
   # GET /bios
   # GET /bios.json
   def index
+    @pageclass = "bio"
     @bios = Bio.all
   end
 
   # GET /bios/1
   # GET /bios/1.json
   def show
+    @pageclass = "bio"
   end
 
   # GET /bios/new

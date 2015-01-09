@@ -20,6 +20,11 @@ $centered-navigation-height: 60px;
 $centered-navigation-item-padding: 1em;
 $centered-navigation-submenu-padding: 1em;
 
+$body-color-dark:    #434343;
+$body-color-light:   #747474;
+$header-color-dark:  #323232;
+$header-color-light: #484848;
+
 @import "bourbon";
 @import "base/grid-settings";
 @import "neat";
@@ -34,8 +39,9 @@ $centered-navigation-submenu-padding: 1em;
 body {
     width:  100%;
     height: 100%;
-    @include background(linear-gradient(to right, #505050 0%, #747474 50%, #505050 100%));
+    @include background(linear-gradient(to right, $body-color-dark 0%, $body-color-light 50%, $body-color-dark 100%));
     background-color: #808080;
+    margin: 0px;
 }
 
 .content {
