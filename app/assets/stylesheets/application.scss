@@ -14,16 +14,25 @@
 
 $visual-grid: false;
 
-$large-screen: em(860) !default;
-$horizontal-bar-mode: $large-screen;
-$centered-navigation-height: 60px;
-$centered-navigation-item-padding: 1em;
+$large-screen:                        em(860) !default;
+$horizontal-bar-mode:                 $large-screen;
+$centered-navigation-height:          60px;
+$centered-navigation-item-padding:    1em;
 $centered-navigation-submenu-padding: 1em;
 
-$body-color-dark:    #434343;
-$body-color-light:   #747474;
-$header-color-dark:  #323232;
-$header-color-light: #484848;
+$base-content-font:   "generic";
+$bold-content-font:   "genericBold";
+
+$body-color-dark:     #434343;
+$body-color-light:    #747474;
+$header-color-dark:   #323232;
+$header-color-light:  #484848;
+
+$header-font-color:   #ebebeb;
+$selected-page-color: #de9b26;
+$not-selected-page:   #b0b0b0;
+$page-content-color:  #d3d3d3;
+$select-bar-color:    #c0c0c0;
 
 @import "bourbon";
 @import "base/grid-settings";
@@ -46,4 +55,6 @@ body {
 
 .content {
     @include outer-container;
+    position: relative;
+    top: -50px;
 }

@@ -10,8 +10,10 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
-<%= link_to 'Back', demoreels_path %>
+<% if current_user %>
+	<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
+	<%= link_to 'Back', demoreels_path %>
+<% end %>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/foundation/js/foundation.min.js"></script>

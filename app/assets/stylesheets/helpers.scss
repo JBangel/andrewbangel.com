@@ -2,6 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+///////////////////////////////////////////////////////////////////////////////////
+$alert-color: #FFF6BF !default;
+$error-color: #FBE3E4 !default;
+$success-color: #E6EFC2 !default;
+$notice-color: #E5EDF8 !default;
+$base-spacing: 1.5em !default;
+//////////////////////////////////////////////////////////////////////////////////
+
+@mixin flash($color) {
+  -webkit-font-smoothing: antialiased;
+  background: $color;
+  color: darken($color, 60);
+  display: block;
+  font-weight: bold;
+  margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 2;
+  text-align: center;
+
+  a {
+    border-bottom: 1px solid transparentize(darken($color, 70), .7);
+    color: darken($color, 70);
+    text-decoration: none;
+
+    &:hover {
+      color: darken($color, 90);
+    }
+  }
+}
+
+.flash-alert {
+  @include flash($alert-color);
+}
+
+.flash-error {
+  @include flash($error-color);
+}
+
+.flash-notice {
+  @include flash($notice-color);
+}
+
+.flash-success {
+  @include flash($success-color);
+}
+
 .navbar {
     ul {
         margin: 0;
@@ -17,16 +62,12 @@
     }
 
     li.selected {
-        border-bottom: 1px solid white;
-
-        a {
-            color: orange;
-        }
+        border-bottom: 1px solid $select-bar-color;
     }
 
     li {
-        margin-left: 0;
-        padding: 0px 15px;
+        margin: 0px 7px;
+        padding: 0px 8px;
         list-style: none;
         display: inline;
     }
@@ -43,5 +84,7 @@
     @include size(100%);
   }
 }
+
+
 
 

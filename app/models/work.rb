@@ -1,4 +1,5 @@
 require_dependency "VideoURLBuilder"
+require_dependency "markdown_handler"
 
 class Work < ActiveRecord::Base
   def video_url

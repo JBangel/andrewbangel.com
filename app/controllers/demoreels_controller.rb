@@ -33,7 +33,7 @@ class DemoreelsController < ApplicationController
 
     respond_to do |format|
       if @demoreel.save
-        format.html { redirect_to @demoreel, notice: 'Demoreel was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Demoreel was successfully created.' }
         format.json { render :show, status: :created, location: @demoreel }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class DemoreelsController < ApplicationController
   def update
     respond_to do |format|
       if @demoreel.update(demoreel_params)
-        format.html { redirect_to @demoreel, notice: 'Demoreel was successfully updated.' }
+        format.html { redirect_to root_url, notice: 'Demoreel was successfully updated.' }
         format.json { render :show, status: :ok, location: @demoreel }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class DemoreelsController < ApplicationController
   def destroy
     @demoreel.destroy
     respond_to do |format|
-      format.html { redirect_to demoreels_url, notice: 'Demoreel was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Demoreel was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
