@@ -1,16 +1,20 @@
 section#header {
     @include outer-container;
     @include background(image-url('banner-sketch.png') no-repeat, linear-gradient(to right, $header-color-dark 0%, $header-color-light 50%, $header-color-dark 100%));
-    background-size: auto 95%, auto;
-    background-origin: content-box;
-    background-position: right center;
+    background-size: auto, auto;
+    background-clip: border-box, content-box;
+    background-position: right top;
 
-    margin:    30px 0 50px 0;
-    padding:   30px 30px 0 30px;
-    height:    175px;
+    margin:    30px 0 0 0;
+    padding:   0px 0px 84px 0px;
+    height:    257px;
     width:     100%;
     max-width: none;
     position: relative;
+
+    .inner {
+        padding: 15px 0 0 15px;
+    }
 
     h1 {
         color: white;
@@ -39,7 +43,7 @@ section#header {
 
     .navbar {
         position: absolute;
-        bottom: 15px;
+        bottom: 90px;
         width: 100%;
 
         ul {

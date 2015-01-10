@@ -10,6 +10,7 @@
   </head>
   <body>
     <section id="header">
+      <div class="inner">
       <h1><span class="heavy">ANDREW</span> BANGEL</h1>
       <h2>CHARACTER ANIMATOR</h2>
       <div class="navbar">
@@ -19,6 +20,7 @@
           <li<%= ' class=selected' if @pageclass == "bio"      %>><%= link_to "ABOUT", bios_path %></li>
           <li<%= ' class=selected' if @pageclass == "contact"  %>><%= link_to "CONTACT", contacts_path %></li>
         </ul>
+      </div>
       </div>
     </section>
 
