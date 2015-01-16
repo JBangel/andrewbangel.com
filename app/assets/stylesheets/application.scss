@@ -22,6 +22,7 @@ $centered-navigation-submenu-padding: 1em;
 
 $base-content-font:   "generic";
 $bold-content-font:   "genericBold";
+$thin-content-font:   "XPPaatchRegular";
 
 $body-color-dark:     #434343;
 $body-color-light:    #747474;
@@ -44,9 +45,12 @@ $select-bar-color:    #c0c0c0;
 @import "header";
 @import "demoreels";
 @import "works";
+@import "bios";
+@import "contacts";
 
 body {
     width:  100%;
+    min-width: 920px;
     height: 100%;
     @include background(linear-gradient(to right, $body-color-dark 0%, $body-color-light 50%, $body-color-dark 100%));
     background-color: #808080;

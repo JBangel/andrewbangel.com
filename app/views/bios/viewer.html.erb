@@ -1,0 +1,7 @@
+<div class="mepic">
+	<%= image_tag "biopic.jpeg", alt: "Picture of me" %>
+</div>
+<div class="aboutme">
+	<h1>Bio</h1>
+	<%= markdown(@bio.body.to_s) %>
+</div>

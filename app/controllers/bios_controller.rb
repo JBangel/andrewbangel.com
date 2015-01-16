@@ -14,6 +14,11 @@ class BiosController < ApplicationController
     @pageclass = "bio"
   end
 
+  def viewer
+    @pageclass = "bio"
+    @bio = Bio.find_by active: true
+  end
+
   # GET /bios/new
   def new
     @bio = Bio.new

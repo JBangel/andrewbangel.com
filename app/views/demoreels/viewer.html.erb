@@ -1,7 +1,6 @@
 <div class="navbar">
   <ul>
     <li><%= link_to 'BREAKDOWN', @demoreel.breakdown_url %></li>
-    <li><%= link_to 'RESUME', @demoreel.resume_url %></li>
   </ul>
 </div>
 <div id="demoreel-video">
@@ -14,7 +13,3 @@
 	<%= link_to 'Edit', edit_demoreel_path(@demoreel) %> |
 	<%= link_to 'Back', demoreels_path %>
 <% end %>
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/foundation/js/foundation.min.js"></script>
-<script src="js/app.js"></script>

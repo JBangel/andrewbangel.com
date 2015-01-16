@@ -15,9 +15,5 @@ class Demoreel < ActiveRecord::Base
   def breakdown_url
     "<a href=\"#\">BREAKDOWN</a>"
   end
-
-  def alpha
-    "ABC"
-  end
 end
 

@@ -13,6 +13,11 @@ class ContactsController < ApplicationController
   def show
   end
 
+  def viewer
+    @pageclass = "contact"
+    @bio = Bio.find_by active: true
+  end
+
   # GET /contacts/new
   def new
     @contact = Contact.new

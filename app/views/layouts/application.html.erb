@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Andrew BANGEL" %></title>
     <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/generic" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/paatch" rel="stylesheet" type="text/css"/>
     <%= stylesheet_link_tag    "application" %>
@@ -17,10 +17,11 @@
       <h2>CHARACTER ANIMATOR</h2>
       <div class="navbar">
         <ul>
+          <li<%= ' class=selected' if @pageclass == "bio"      %>><%= link_to "BIO", bio_viewer_path %></li>
           <li<%= ' class=selected' if @pageclass == "demoreel" %>><%= link_to "REEL", root_path %></li>
           <li<%= ' class=selected' if @pageclass == "works"    %>><%= link_to "ANIMATIONS", works_path %></li>
-          <li<%= ' class=selected' if @pageclass == "bio"      %>><%= link_to "ABOUT", bios_path %></li>
-          <li<%= ' class=selected' if @pageclass == "contact"  %>><%= link_to "CONTACT", contacts_path %></li>
+          <li><%= link_to "RESUMÉ", bios_path %></li>
+          <li<%= ' class=selected' if @pageclass == "contact"  %>><%= link_to "CONTACT", contact_viewer_path %></li>
         </ul>
       </div>
       </div>
@@ -36,6 +37,10 @@
     <section id="<%= @pageclass %>" class="content">
       <%= yield %>
     </section>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
 
     <%= javascript_include_tag "application" %>
   </body>

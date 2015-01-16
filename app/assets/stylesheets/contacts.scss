@@ -1,3 +1,64 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+section#contact {
+	position: relative;
+	padding: 25px;
+
+	h1 {
+		font-family: $base-content-font;
+		font-weight: normal;
+		font-style:  normal;
+		color: white;
+	}
+
+	.contactpic {
+		@include span-columns(8);
+		@include background(image-url("contactme.jpeg"));
+
+		padding-left:         15px;
+		background-repeat:    no-repeat;
+		background-position:  top right;
+		background-size:      contain;
+		background-origin:    content-box;
+
+		height: 2500px;
+	}
+
+	.contactme {
+		@include span-columns(9);
+		@include omega;
+		
+		position: relative;
+
+		.slid {
+			position: relative;
+			left: 10px;
+		}
+
+		.indented {
+			position: relative;
+			left: 50px;
+		}
+
+		p, a {
+			color: white;
+			font-size: 1.3em;
+			font-family: $thin-content-font;
+			font-weight: 500;
+			font-style:  normal;
+			font-variant: small-caps;
+			margin-bottom: -5px;
+		}
+
+		p.email {
+			font-weight: 900;
+		}
+
+		.signed {
+			font-size: 1.3em;
+			margin-top: 30px;
+		}
+	}
+}

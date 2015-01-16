@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get '/users/new', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'
 
+  get '/bio', to: 'bios#viewer', as: 'bio_viewer'
+  get '/contact', to: 'contacts#viewer', as: 'contact_viewer'
+
   resources :bios
   resources :contacts
   resources :works
