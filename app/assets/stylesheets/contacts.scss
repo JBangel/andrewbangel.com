@@ -11,6 +11,7 @@ section#contact {
 		font-weight: normal;
 		font-style:  normal;
 		color: white;
+		font-variant: small-caps;
 	}
 
 	.contactpic {
@@ -27,19 +28,19 @@ section#contact {
 	}
 
 	.contactme {
-		@include span-columns(9);
+		@include span-columns(10);
 		@include omega;
 		
 		position: relative;
 
 		.slid {
 			position: relative;
-			left: 10px;
+			left: 30px;
 		}
 
 		.indented {
 			position: relative;
-			left: 50px;
+			left: 75px;
 		}
 
 		p, a {
