@@ -2,29 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$contact-text-size:     1.4em;
+
 section#contact {
 	position: relative;
-	padding: 25px;
+	min-height: 700px;
+	padding: 40px;
+
+	@include background(image-url("pageborders.png") top left no-repeat);
 
 	h1 {
-		font-family: $base-content-font;
-		font-weight: normal;
-		font-style:  normal;
-		color: white;
+		font-family:  $base-content-font;
+		font-weight:  normal;
+		font-style:   normal;
+		color:        white;
 		font-variant: small-caps;
+		margin-bottom: 20px;
 	}
 
 	.contactpic {
-		@include span-columns(8);
-		@include background(image-url("contactme.jpeg"));
+		@include span-columns(10);
+		@include background(image-url("contactme.png"));
 
+		position:             relative;
 		padding-left:         15px;
 		background-repeat:    no-repeat;
 		background-position:  top right;
 		background-size:      contain;
 		background-origin:    content-box;
-
-		height: 2500px;
+		min-height:           550px;
 	}
 
 	.contactme {
@@ -44,13 +50,17 @@ section#contact {
 		}
 
 		p, a {
+            font-family: $base-content-font;
+            font-weight: normal;
+            font-style:  normal;
 			color: white;
-			font-size: 1.3em;
-			font-family: $thin-content-font;
-			font-weight: 500;
-			font-style:  normal;
+			font-size: $contact-text-size;
 			font-variant: small-caps;
 			margin-bottom: -5px;
+		}
+
+		a {
+			color: $selected-page-color;
 		}
 
 		p.email {
@@ -58,7 +68,10 @@ section#contact {
 		}
 
 		.signed {
-			font-size: 1.3em;
+			font-family: $thin-content-font;
+			font-weight: 500;
+			font-style:  normal;
+			font-size: $contact-text-size;
 			margin-top: 30px;
 		}
 	}

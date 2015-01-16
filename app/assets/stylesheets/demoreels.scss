@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section#demoreel {
+  @include span-columns(16);
+  @include shift(4);
+  @include omega;
+
   a {
     color: $page-content-color;
   }

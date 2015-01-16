@@ -3,27 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section#bio {
+	position: relative;
+	min-height: 700px;
+	padding: 40px;
+	@include background(image-url("pageborders.png") top left no-repeat);
+
 	h1 {
-		font-family: $thin-content-font;
-		font-weight: normal;
-		font-style:  normal;		
+        font-family: $base-content-font;
+        font-weight: normal;
+        font-style:  normal;
 	}
 
 	p {
-		font-family: $thin-content-font;
-		font-weight: normal;
-		font-style:  normal;		
+        font-family: $base-content-font;
+        font-weight: normal;
+        font-style:  normal;
 	}
 
 	.mepic {
-		@include span-columns(6);
+		@include span-columns(8);
 		img {
 			width: 90%;
 		}
 	}
 
 	.aboutme {
-		@include span-columns(18);
+		@include span-columns(16);
 		@include omega;
 		color: white;
 		

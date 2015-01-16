@@ -48,29 +48,33 @@ $base-spacing: 1.5em !default;
 }
 
 .navbar {
-    ul {
-        margin: 0;
-        padding: 0;
-    }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-    p {
-        display: inline;
-    }
+  p {
+    display: inline;
+  }
 
-    a {
-        color: white;
-    }
+  a {
+    color: white;
+  }
 
-    li.selected {
-        border-bottom: 1px solid $select-bar-color;
-    }
+  a:hover {
+    color: $selected-page-color;
+  }
 
-    li {
-        margin: 0px 7px;
-        padding: 0px 8px;
-        list-style: none;
-        display: inline;
-    }
+  li.selected {
+    border-bottom: 1px solid $select-bar-color;
+  }
+
+  li {
+    margin: 0px 7px;
+    padding: 0px 8px;
+    list-style: none;
+    display: inline;
+  }
 }
 
 .video-wrapper {
