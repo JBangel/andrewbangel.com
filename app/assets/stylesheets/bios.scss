@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 section#bio {
+	@include span-columns(16);
+	@include shift(4);
+	@include omega;
+
 	position: relative;
 	min-height: 700px;
 	padding: 40px;
