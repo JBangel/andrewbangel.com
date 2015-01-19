@@ -74,6 +74,37 @@ section#header {
                     width:  20px;
                     height: 20px;
                 }
+
+                a.rollover {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    text-decoration: none;
+
+                    &.twitter {
+                        background: url("twitter_sprites.png");
+                        background-size: 40px;
+                    }
+
+                    &.facebook {
+                        background: url("facebook_sprites.png");
+                        background-size: 40px;
+                    }
+
+                    &.linkedin {
+                        background: url("linkedin_sprites.png");
+                        background-size: 40px;
+                    }
+                }
+
+                a.rollover:hover {
+                    background-position: -20px 0;
+                }
+
+                .displace {
+                    position: absolute;
+                    left: -5000px;
+                }
             }
 
             #menubar {

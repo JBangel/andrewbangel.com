@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "Andrew BANGEL" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Andrew Bangel" %></title>
     <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/generic" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/paatch" rel="stylesheet" type="text/css"/>
     <%= stylesheet_link_tag    "application" %>
@@ -13,16 +13,18 @@
   <body>
     <section id="header">
       <div class="inner">
-        <div class="nameplate">
-          <h1><span class="heavy">ANDREW</span>BANGEL</h1>
-          <h2>CHARACTER ANIMATOR</h2>
-        </div>
+        <a href="<%= root_path %>">
+          <div class="nameplate">
+            <h1><span class="heavy">ANDREW</span>BANGEL</h1>
+            <h2>CHARACTER ANIMATOR</h2>
+          </div>
+        </a>
         <div class="navbar">
           <div id="mediabar">
             <ul>
-              <li><%= link_to image_tag("facebook.png", border: 0, width: 20, height: 20), "https://www.facebook.com/ajbangel" %></li>
-              <li><%= link_to image_tag("twitter.png" , border: 0, width: 20, height: 20), "https://twitter.com/ajbangel" %></li>
-              <li><%= link_to image_tag("linkedin.png", border: 0, width: 20, height: 20), "https://www.linkedin.com/profile/view?id=85227749" %></li>
+              <li><a href="https://www.facebook.com/ajbangel"                 class="rollover facebook"><span class="displace">Facebook</span></a></li>
+              <li><a href="https://twitter.com/ajbangel"                      class="rollover twitter"><span class="displace">Twitter</span></a></li>
+              <li><a href="https://www.linkedin.com/profile/view?id=85227749" class="rollover linkedin"><span class="displace">Linkedin</span></a></li>
             </ul>
           </div>
           <div id="menubar">
