@@ -8,7 +8,7 @@ section#contact {
     @include span-columns(16);
     @include shift(4);
     @include omega;
-    
+
 	position: relative;
 	min-height: 700px;
 	padding: 40px;
@@ -25,9 +25,11 @@ section#contact {
 	}
 
 	.contactpic {
-		@include span-columns(10);
+		@include span-columns(8 of 16);
+		@include omega;
 		@include background(image-url("contactme.png"));
 
+		z-index: 			  -100;
 		position:             relative;
 		padding-left:         15px;
 		background-repeat:    no-repeat;
@@ -38,8 +40,7 @@ section#contact {
 	}
 
 	.contactme {
-		@include span-columns(10);
-		@include omega;
+		@include span-columns(8 of 16);
 		
 		position: relative;
 
